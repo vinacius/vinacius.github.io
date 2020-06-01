@@ -69,7 +69,7 @@ a.branco::after {
   width: 0;
   height: 2px;
   background: currentColor;
-  transition: width .3s;
+  transition: width 0.3s;
 }
 a.branco:hover::after {
   width: 100%;
@@ -88,7 +88,7 @@ a.msc::after {
   width: 0;
   height: 2px;
   background: #e75553;
-  transition: width .3s;
+  transition: width 0.3s;
 }
 a.msc:hover::after {
   width: 100%;
@@ -106,7 +106,7 @@ a.cdg::after {
   width: 0;
   height: 2px;
   background: #06975e;
-  transition: width .3s;
+  transition: width 0.3s;
 }
 a.cdg:hover::after {
   width: 100%;
@@ -124,7 +124,7 @@ a.dsg::after {
   width: 0;
   height: 2px;
   background: #2c6fa3;
-  transition: width .3s;
+  transition: width 0.3s;
 }
 a.dsg:hover::after {
   width: 100%;
@@ -142,7 +142,7 @@ a.outro::after {
   width: 0;
   height: 2px;
   background: #262520;
-  transition: width .3s;
+  transition: width 0.3s;
 }
 a.outro:hover::after {
   width: 100%;
@@ -179,7 +179,7 @@ footer {
   width: 0;
   height: 2px;
   background: currentColor;
-  transition: width .3s;
+  transition: width 0.3s;
 }
 .tooltip span {
   display: none;
@@ -194,7 +194,7 @@ footer {
   box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.54);
   transform-origin: center bottom;
   animation-name: gira;
-  animation-duration: .3s;
+  animation-duration: 0.3s;
 }
 .tooltip:hover::after {
   width: 100%;
@@ -238,7 +238,7 @@ footer {
   margin-top: 35px;
 }
 .bigTitle h1 {
-  font-size: calc(30px);
+  font-size: calc(40px + (120 - 40) * ((100vw - 300px) / (1900 - 300)));
   cursor: pointer;
   max-width: 100%;
 }
@@ -284,7 +284,7 @@ footer {
 .logo:hover,
 .logoHome:hover {
   transform: scale(0.95);
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 #section1 {
   position: fixed;
@@ -342,7 +342,7 @@ footer {
 }
 .cover:hover {
   transform: scale(1);
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 .mscText {
   background-color: #e75553;
@@ -371,7 +371,7 @@ footer {
   backface-visibility: hidden;
 }
 .perfil:hover {
-  transition: .5s ease;
+  transition: 0.5s ease;
   opacity: 0.8;
 }
 .textoCover {
@@ -383,8 +383,8 @@ footer {
 }
 .icones:hover {
   animation-name: bScale;
-  animation-duration: .5s;
-  transition: .5s ease;
+  animation-duration: 0.5s;
+  transition: 0.5s ease;
   opacity: 0.9;
 }
 .image-link {
@@ -461,7 +461,7 @@ iframe {
 }
 .videos:hover {
   transform: scale(0.97);
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 .capaProjeto {
   display: flex;
@@ -508,8 +508,8 @@ iframe {
 .pula-capa {
   margin-left: auto;
   margin-right: auto;
-  scale: 1.0;
-  padding-bottom: .5%;
+  scale: 1;
+  padding-bottom: 0.5%;
   position: absolute;
   display: flex;
   width: 100%;
@@ -527,7 +527,7 @@ iframe {
 }
 .imagens:hover {
   opacity: 0.9;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 .tituloProjeto {
   top: 0;
@@ -559,5 +559,5 @@ h2.Projeto {
 }
 .inverteCor:hover {
   filter: invert(100%);
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
