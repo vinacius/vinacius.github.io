@@ -1,0 +1,563 @@
+@font-face {
+  font-family: 'Regular';
+  src: url('../fonts/WorkSans/WorkSans-Regular.ttf');
+}
+@font-face {
+  font-family: 'Medium';
+  src: url('../fonts/WorkSans/WorkSans-Medium.ttf');
+}
+@font-face {
+  font-family: 'Bold';
+  src: url('../fonts/WorkSans/WorkSans-Bold.ttf');
+}
+@keyframes bScale {
+  0% {
+    transform: scale(1);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: scale(1.1);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+html,
+body,
+footer {
+  background-color: #FFFFFF;
+  scroll-behavior: smooth;
+}
+p {
+  font-family: 'Regular', sans-serif;
+  color: #262520;
+  margin-bottom: 8px;
+}
+::selection {
+  color: #FFFFFF;
+  background: #262520;
+}
+p.msc {
+  color: #e75553;
+}
+p.branco {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+/* LINKS EM GERAL */
+a.bigTitle {
+  font-family: 'Bold', sans-serif;
+}
+a,
+a:visited {
+  font-family: 'Bold', sans-serif;
+  text-decoration: none;
+  color: currentColor;
+}
+a.branco,
+a.branco:visited {
+  display: inline-block;
+  font-family: 'Bold', sans-serif;
+  text-decoration: none;
+  color: currentColor;
+}
+a.branco::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width .3s;
+}
+a.branco:hover::after {
+  width: 100%;
+}
+/* cores principais para os links */
+a.msc,
+a.msc:visited {
+  display: inline-block;
+  color: #e75553;
+  text-decoration: none;
+  font-family: 'Bold', sans-serif;
+}
+a.msc::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #e75553;
+  transition: width .3s;
+}
+a.msc:hover::after {
+  width: 100%;
+}
+a.cdg,
+a.cdg:visited {
+  display: inline-block;
+  color: #06975e;
+  text-decoration: none;
+  font-family: 'Bold', sans-serif;
+}
+a.cdg::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #06975e;
+  transition: width .3s;
+}
+a.cdg:hover::after {
+  width: 100%;
+}
+a.dsg,
+a.dsg:visited {
+  display: inline-block;
+  color: #2c6fa3;
+  text-decoration: none;
+  font-family: 'Bold', sans-serif;
+}
+a.dsg::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #2c6fa3;
+  transition: width .3s;
+}
+a.dsg:hover::after {
+  width: 100%;
+}
+a.outro,
+a.outro:visited {
+  display: inline-block;
+  color: #262520;
+  text-decoration: none;
+  font-family: 'Bold', sans-serif;
+}
+a.outro::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #262520;
+  transition: width .3s;
+}
+a.outro:hover::after {
+  width: 100%;
+}
+h1 {
+  font-family: 'Bold', sans-serif;
+  font-size: 128px;
+  line-height: 38px;
+}
+h2 {
+  font-family: 'Bold', sans-serif;
+  font-size: 32px;
+  line-height: 38px;
+  color: #262520;
+  padding-bottom: 20px;
+}
+footer {
+  margin: auto;
+  padding: 20px;
+  background-color: #262520;
+  fill: #262520;
+  text-align: center;
+}
+/*classes usadas pra fazer o popup de vídeos da home*/
+.tooltip {
+  display: inline-block;
+  font-family: 'Bold', sans-serif;
+  text-decoration: none;
+  position: relative;
+}
+.tooltip::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width .3s;
+}
+.tooltip span {
+  display: none;
+}
+.tooltip:hover span {
+  width: 320px;
+  height: 180px;
+  display: block;
+  position: fixed;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.54);
+  transform-origin: center bottom;
+  animation-name: gira;
+  animation-duration: .3s;
+}
+.tooltip:hover::after {
+  width: 100%;
+}
+@keyframes gira {
+  from {
+    transform: translateY(70px) rotate(-30deg);
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.35, 0.18, 0.17, 0.99);
+  }
+  to {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0.35, 0.18, 0.17, 0.99);
+  }
+}
+/* retira os controles do vídeo*/
+::-webkit-media-controls {
+  display: none !important;
+}
+/*estilos gerais das páginas*/
+.texto {
+  margin: auto;
+  width: 550px;
+  max-width: 100%;
+  font-size: 18px;
+  line-height: 28px;
+  box-sizing: border-box;
+  display: block;
+  padding-bottom: 20px;
+}
+.subTitles {
+  position: fixed;
+  box-sizing: border-box;
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 2;
+  width: 100%;
+  z-index: 2;
+  margin-top: 35px;
+}
+.bigTitle h1 {
+  font-size: calc(30px);
+  cursor: pointer;
+  max-width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .bigTitle {
+    font-size: 60%;
+  }
+  .imagens {
+    margin-top: 0%;
+  }
+}
+.logo {
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: auto;
+  display: block;
+  width: 80px;
+  max-width: 100%;
+  vertical-align: 50%;
+  padding: 10%;
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    padding: 20% 10% 10% 0%;
+    max-width: 80%;
+  }
+}
+.logoHome {
+  padding-top: 40px;
+  box-sizing: border-box;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+  max-width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .logoHome {
+    min-width: 25vw;
+  }
+}
+.bigTitle:hover,
+.logo:hover,
+.logoHome:hover {
+  transform: scale(0.95);
+  transition: .5s ease;
+}
+#section1 {
+  position: fixed;
+  float: left;
+}
+/* Estilos - pág música */
+.content {
+  position: relative;
+  min-width: 25%;
+  box-sizing: border-box;
+  display: block;
+  padding: 20px 20px;
+}
+.contentMsc {
+  left: 2%;
+  width: 94%;
+  background-color: #FFFFFF;
+  padding: 65px;
+  flex-wrap: wrap;
+  flex-shrink: 2;
+  overflow-y: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  position: relative;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  .contentMsc {
+    max-width: 100%;
+    padding: 6px;
+  }
+}
+.mscBox {
+  border-spacing: 20px;
+  width: 100%;
+  float: left;
+  max-width: 550px;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  overflow: hidden;
+}
+.coverBbox {
+  width: 100%;
+  height: 100%;
+  background-color: #e75553;
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+}
+.cover {
+  transform: scale(1.085);
+  width: 100%;
+  height: 100%;
+}
+.cover:hover {
+  transform: scale(1);
+  transition: .5s ease;
+}
+.mscText {
+  background-color: #e75553;
+  color: #FFFFFF;
+  width: 100%;
+  height: 200px;
+  vertical-align: middle;
+  float: left;
+  box-sizing: border-box;
+  padding: 12px 20px 20px 20px;
+}
+@media screen and (max-width: 768px) {
+  .mscText {
+    height: 100%;
+  }
+}
+.perfil {
+  display: block;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  min-width: 200px;
+  width: 256px;
+  backface-visibility: hidden;
+}
+.perfil:hover {
+  transition: .5s ease;
+  opacity: 0.8;
+}
+.textoCover {
+  padding: 10px;
+}
+.icones {
+  width: 30px;
+  margin: 4px;
+}
+.icones:hover {
+  animation-name: bScale;
+  animation-duration: .5s;
+  transition: .5s ease;
+  opacity: 0.9;
+}
+.image-link {
+  position: relative;
+}
+/* Estilos das páginas de Projeto */
+.tituloPrincipal {
+  font-family: 'Bold', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 68px;
+  color: #2c6fa3;
+}
+.tituloSecundario {
+  font-family: 'Regular', sans-serif;
+  font-style: normal;
+  font-size: 64px;
+  line-height: 68px;
+  color: #262520;
+}
+@media (max-width: 600px) {
+  .tituloPrincipal,
+  .tituloSecundario,
+  .textoCorrido,
+  h1.Projeto,
+  h2.Projeto {
+    font-size: 32px;
+    line-height: 34px;
+  }
+}
+.textoCorrido {
+  font-family: 'Regular', sans-serif;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 28px;
+}
+.textoLegenda {
+  display: flex;
+  padding: 16px;
+  font-family: 'Bold', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  align-items: flex-end;
+}
+.alinhaEmbaixo {
+  display: flex;
+  align-items: flex-end;
+}
+.textoBranco {
+  color: #FFFFFF;
+}
+.textoAzul {
+  color: #2c6fa3;
+}
+/* Estilos para vídeos de projetos */
+iframe {
+  background-color: #2c6fa3;
+}
+.vBbox {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 100%;
+  height: 100%;
+}
+.videos {
+  position: relative;
+  border: 8px;
+  border-style: solid;
+  border-color: #2c6fa3;
+  transform: scale(0.98);
+}
+.videos:hover {
+  transform: scale(0.97);
+  transition: .5s ease;
+}
+.capaProjeto {
+  display: flex;
+  /*background-image: url("../images/rio2016/capa_logos.jpg");*/
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#videoCapa {
+  display: flex;
+  z-index: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100vh;
+  min-height: 100vh;
+}
+.boxPreto {
+  background-color: #262520;
+}
+.separador {
+  z-index: 1;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  width: 20%;
+  height: 12px;
+  background-color: #2c6fa3;
+}
+.progress-container {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 4px;
+}
+.progress-bar {
+  height: 4px;
+  background: #2c6fa3;
+  width: 0%;
+}
+.pula-capa {
+  margin-left: auto;
+  margin-right: auto;
+  scale: 1.0;
+  padding-bottom: .5%;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  justify-content: center;
+  align-items: flex-end;
+}
+.imagens {
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  width: 100%;
+  align-items: flex-end;
+}
+.imagens:hover {
+  opacity: 0.9;
+  transition: .5s ease;
+}
+.tituloProjeto {
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+h1.Projeto {
+  font-family: 'Bold', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 68px;
+  color: #FFFFFF;
+  text-align: center;
+}
+h2.Projeto {
+  font-family: 'Regular', sans-serif;
+  font-style: normal;
+  font-size: 42px;
+  line-height: 68px;
+  color: #FFFFFF;
+  text-align: center;
+}
+.bgBranco {
+  background-color: #FFFFFF;
+}
+.inverteCor:hover {
+  filter: invert(100%);
+  transition: .5s ease;
+}
