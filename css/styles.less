@@ -421,6 +421,8 @@ footer {
 /* Estilos das páginas de Projeto */
 @tamTit: 64px;
 @entreTit: 68px;
+@tamSubTit: 32px;
+@entreSubTit: 34px;
 
 .tituloPrincipal {
   font-family: 'Bold', sans-serif;
@@ -434,9 +436,10 @@ footer {
 .tituloSecundario {
   font-family: 'Regular', sans-serif;
   font-style: normal;
-  font-size: @tamTit;
-  line-height: @entreTit;
+  font-size: @tamSubTit;
+  line-height: @entreSubTit;
   color: @corPreto;
+  letter-spacing: -0.01em;
 }
 
 @media (max-width: 600px) {
@@ -585,13 +588,11 @@ iframe {
 }
 
 h1.Projeto {
-  font-family: 'Bold', sans-serif;
+  font-family: 'Regular', sans-serif;
   font-style: normal;
-  font-weight: bold;
   font-size: @tamTit;
   line-height: 68px;
-  color: @corBranco;
-  text-align: center;
+  text-align: left;
   }
 
 h2.Projeto {
@@ -599,8 +600,7 @@ h2.Projeto {
   font-style: normal;
   font-size: @tamTit/2 + 10;
   line-height: @entreTit;
-  color: @corBranco;
-  text-align: center;
+  text-align: left;
 }
 
 .bgBranco {

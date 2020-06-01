@@ -402,9 +402,10 @@ footer {
 .tituloSecundario {
   font-family: 'Regular', sans-serif;
   font-style: normal;
-  font-size: 64px;
-  line-height: 68px;
+  font-size: 32px;
+  line-height: 34px;
   color: #262520;
+  letter-spacing: -0.01em;
 }
 @media (max-width: 600px) {
   .tituloPrincipal,
@@ -538,21 +539,18 @@ iframe {
   align-items: center;
 }
 h1.Projeto {
-  font-family: 'Bold', sans-serif;
+  font-family: 'Regular', sans-serif;
   font-style: normal;
-  font-weight: bold;
   font-size: 64px;
   line-height: 68px;
-  color: #FFFFFF;
-  text-align: center;
+  text-align: left;
 }
 h2.Projeto {
   font-family: 'Regular', sans-serif;
   font-style: normal;
   font-size: 42px;
   line-height: 68px;
-  color: #FFFFFF;
-  text-align: center;
+  text-align: left;
 }
 .bgBranco {
   background-color: #FFFFFF;
