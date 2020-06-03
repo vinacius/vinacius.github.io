@@ -14,7 +14,8 @@
 }
 .font-face('Regular', 'WorkSans/WorkSans-Regular');
 .font-face('Medium', 'WorkSans/WorkSans-Medium');
-.font-face('Bold', 'WorkSans/WorkSans-Bold');
+.font-face('SemiBold', 'WorkSans/WorkSans-SemiBold');
+.font-face('SemiBold', 'WorkSans/WorkSans-SemiBold');
 
 
 .bounce(@nomeAnim, @varIn, @varBounce){
@@ -59,18 +60,18 @@ p.branco {
 
 /* LINKS EM GERAL */
 a.bigTitle {
-	font-family: 'Bold', sans-serif;
+	font-family: 'SemiBold', sans-serif;
 }
 
 a, a:visited {
-	font-family: 'Bold', sans-serif;
+	font-family: 'SemiBold', sans-serif;
 	text-decoration: none;
 	color: currentColor;
 }
 
 a.branco, a.branco:visited {
 	display: inline-block;
-	font-family: 'Bold', sans-serif;
+	font-family: 'SemiBold', sans-serif;
 	text-decoration: none;
 	color: currentColor;
 }
@@ -86,12 +87,31 @@ a.branco::after {
 
 a.branco:hover::after {width: 100%;}
 
+/* LINKS DO MENU */
+a.menu, a.menu:visited {
+	display: inline-block;
+	font-family: 'Regular', sans-serif;
+	text-decoration: none;
+	color: currentColor;
+}
+
+a.menu::after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background: currentColor;
+	transition: width .3s;
+}
+
+a.menu:hover::after {width: 100%;}
+
 /* cores principais para os links */
 a.msc, a.msc:visited {
 	display: inline-block;
 	color: @corMsc;
 	text-decoration: none;
-	font-family: 'Bold', sans-serif;
+	font-family: 'SemiBold', sans-serif;
 	}
 a.msc::after {
 	content: '';
@@ -107,7 +127,7 @@ a.cdg, a.cdg:visited {
 	display: inline-block;
 	color: @corCdg;
 	text-decoration: none;
-	font-family: 'Bold', sans-serif;
+	font-family: 'SemiBold', sans-serif;
 	}
 a.cdg::after {
 	content: '';
@@ -123,7 +143,7 @@ a.dsg, a.dsg:visited {
 	display: inline-block;
 	color: @corDsg;
 	text-decoration: none;
-	font-family: 'Bold', sans-serif;
+	font-family: 'SemiBold', sans-serif;
 	}
 a.dsg::after {
 	content: '';
@@ -139,7 +159,7 @@ a.outro, a.outro:visited {
 	display: inline-block;
 	color: @corPreto;
 	text-decoration: none;
-	font-family: 'Bold', sans-serif;
+	font-family: 'SemiBold', sans-serif;
 	}
 a.outro::after {
 	content: '';
@@ -152,13 +172,17 @@ a.outro::after {
 a.outro:hover::after {width: 100%}
 
 h1 {
-	font-family: 'Bold', sans-serif;
+	font-family: 'SemiBold', sans-serif;
 	font-size: 128px;
 	line-height: 38px;
 }
 
+h1.branco {
+	color: @corBranco;
+}
+
 h2 {
-	font-family: 'Bold', sans-serif;
+	font-family: 'SemiBold', sans-serif;
 	font-size: 32px;
 	line-height: 38px;
 	color: @corPreto;
@@ -177,7 +201,7 @@ footer {
 
 .tooltip {
 	display: inline-block;
-	font-family: 'Bold', sans-serif;
+	font-family: 'SemiBold', sans-serif;
     text-decoration:none;
     position:relative;
 }
@@ -425,7 +449,7 @@ footer {
 @entreSubTit: 34px;
 
 .tituloPrincipal {
-  font-family: 'Bold', sans-serif;
+  font-family: 'SemiBold', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: @tamTit;
@@ -438,7 +462,6 @@ footer {
   font-style: normal;
   font-size: @tamSubTit;
   line-height: @entreSubTit;
-  color: @corPreto;
   letter-spacing: -0.01em;
 }
 
@@ -460,7 +483,7 @@ footer {
 .textoLegenda {
   display: flex;
   padding: 16px;
-  font-family: 'Bold', sans-serif;
+  font-family: 'SemiBold', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;

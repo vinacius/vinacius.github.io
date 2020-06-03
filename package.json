@@ -18,6 +18,7 @@
   "homepage": "https://github.com/vinacius/meuSite#readme",
   "dependencies": {
     "enter-view": "^2.0.0",
+    "ffmpeg": "0.0.4",
     "waypoints": "^4.0.1"
   }
 }

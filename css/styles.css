@@ -7,8 +7,12 @@
   src: url('../fonts/WorkSans/WorkSans-Medium.ttf');
 }
 @font-face {
-  font-family: 'Bold';
-  src: url('../fonts/WorkSans/WorkSans-Bold.ttf');
+  font-family: 'SemiBold';
+  src: url('../fonts/WorkSans/WorkSans-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'SemiBold';
+  src: url('../fonts/WorkSans/WorkSans-SemiBold.ttf');
 }
 @keyframes bScale {
   0% {
@@ -48,18 +52,18 @@ p.branco {
 }
 /* LINKS EM GERAL */
 a.bigTitle {
-  font-family: 'Bold', sans-serif;
+  font-family: 'SemiBold', sans-serif;
 }
 a,
 a:visited {
-  font-family: 'Bold', sans-serif;
+  font-family: 'SemiBold', sans-serif;
   text-decoration: none;
   color: currentColor;
 }
 a.branco,
 a.branco:visited {
   display: inline-block;
-  font-family: 'Bold', sans-serif;
+  font-family: 'SemiBold', sans-serif;
   text-decoration: none;
   color: currentColor;
 }
@@ -74,13 +78,32 @@ a.branco::after {
 a.branco:hover::after {
   width: 100%;
 }
+/* LINKS DO MENU */
+a.menu,
+a.menu:visited {
+  display: inline-block;
+  font-family: 'Regular', sans-serif;
+  text-decoration: none;
+  color: currentColor;
+}
+a.menu::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s;
+}
+a.menu:hover::after {
+  width: 100%;
+}
 /* cores principais para os links */
 a.msc,
 a.msc:visited {
   display: inline-block;
   color: #e75553;
   text-decoration: none;
-  font-family: 'Bold', sans-serif;
+  font-family: 'SemiBold', sans-serif;
 }
 a.msc::after {
   content: '';
@@ -98,7 +121,7 @@ a.cdg:visited {
   display: inline-block;
   color: #06975e;
   text-decoration: none;
-  font-family: 'Bold', sans-serif;
+  font-family: 'SemiBold', sans-serif;
 }
 a.cdg::after {
   content: '';
@@ -116,7 +139,7 @@ a.dsg:visited {
   display: inline-block;
   color: #2c6fa3;
   text-decoration: none;
-  font-family: 'Bold', sans-serif;
+  font-family: 'SemiBold', sans-serif;
 }
 a.dsg::after {
   content: '';
@@ -134,7 +157,7 @@ a.outro:visited {
   display: inline-block;
   color: #262520;
   text-decoration: none;
-  font-family: 'Bold', sans-serif;
+  font-family: 'SemiBold', sans-serif;
 }
 a.outro::after {
   content: '';
@@ -148,12 +171,15 @@ a.outro:hover::after {
   width: 100%;
 }
 h1 {
-  font-family: 'Bold', sans-serif;
+  font-family: 'SemiBold', sans-serif;
   font-size: 128px;
   line-height: 38px;
 }
+h1.branco {
+  color: #FFFFFF;
+}
 h2 {
-  font-family: 'Bold', sans-serif;
+  font-family: 'SemiBold', sans-serif;
   font-size: 32px;
   line-height: 38px;
   color: #262520;
@@ -169,7 +195,7 @@ footer {
 /*classes usadas pra fazer o popup de vídeos da home*/
 .tooltip {
   display: inline-block;
-  font-family: 'Bold', sans-serif;
+  font-family: 'SemiBold', sans-serif;
   text-decoration: none;
   position: relative;
 }
@@ -392,7 +418,7 @@ footer {
 }
 /* Estilos das páginas de Projeto */
 .tituloPrincipal {
-  font-family: 'Bold', sans-serif;
+  font-family: 'SemiBold', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 64px;
@@ -404,7 +430,6 @@ footer {
   font-style: normal;
   font-size: 32px;
   line-height: 34px;
-  color: #262520;
   letter-spacing: -0.01em;
 }
 @media (max-width: 600px) {
@@ -426,7 +451,7 @@ footer {
 .textoLegenda {
   display: flex;
   padding: 16px;
-  font-family: 'Bold', sans-serif;
+  font-family: 'SemiBold', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
