@@ -170,11 +170,12 @@ a.outro::after {
 a.outro:hover::after {
   width: 100%;
 }
+/* classes gerais */
 h1 {
   font-family: 'Regular', sans-serif;
   font-style: normal;
   font-size: 64px;
-  line-height: 68px;
+  line-height: 69px;
   text-align: left;
 }
 h1.branco {
@@ -198,7 +199,7 @@ h2.Projeto {
   font-family: 'Regular', sans-serif;
   font-style: normal;
   font-size: 42px;
-  line-height: 68px;
+  line-height: 69px;
   text-align: left;
 }
 .tituloProjeto {
@@ -216,50 +217,8 @@ footer {
   fill: #262520;
   text-align: center;
 }
-/*classes usadas pra fazer o popup de vídeos da home*/
-.tooltip {
-  display: inline-block;
-  font-family: 'SemiBold', sans-serif;
-  text-decoration: none;
-  position: relative;
-}
-.tooltip::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: currentColor;
-  transition: width 0.3s;
-}
-.tooltip span {
-  display: none;
-}
-.tooltip:hover span {
-  width: 320px;
-  height: 180px;
-  display: block;
-  position: fixed;
-  overflow: hidden;
-  z-index: 1;
-  box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.54);
-  transform-origin: center bottom;
-  animation-name: gira;
-  animation-duration: 0.3s;
-}
-.tooltip:hover::after {
-  width: 100%;
-}
-@keyframes gira {
-  from {
-    transform: translateY(70px) rotate(-30deg);
-    opacity: 0;
-    animation-timing-function: cubic-bezier(0.35, 0.18, 0.17, 0.99);
-  }
-  to {
-    transform: translateY(0px) rotate(0deg);
-    opacity: 1;
-    animation-timing-function: cubic-bezier(0.35, 0.18, 0.17, 0.99);
-  }
+.containerBase {
+  padding-top: 96px;
 }
 /* estilos das thumbs da home */
 .thumb {
@@ -282,11 +241,6 @@ footer {
 }
 .overlay:hover {
   opacity: 0.7;
-}
-.imgThumb {
-  position: absolute;
-  width: 100%;
-  height: 100%;
 }
 .videoThumb {
   position: absolute;
@@ -357,7 +311,7 @@ footer {
   display: block;
   width: 80px;
   max-width: 100%;
-  vertical-align: 50%;
+  /*vertical-align: 50%;*/
   padding: 10%;
 }
 @media screen and (max-width: 768px) {
@@ -401,7 +355,7 @@ footer {
 .contentMsc {
   left: 2%;
   width: 94%;
-  background-color: #FFFFFF;
+  background-color: #262520;
   padding: 65px;
   flex-wrap: wrap;
   flex-shrink: 2;
@@ -503,24 +457,16 @@ footer {
   font-family: 'Regular', sans-serif;
   font-style: normal;
   font-size: 32px;
-  line-height: 34px;
+  line-height: 40x;
   letter-spacing: -0.01em;
 }
-@media (max-width: 1280px) {
-  .tituloPrincipal,
-  .textoCorrido,
-  h2.Projeto {
-    font-size: 32px;
-    line-height: 34px;
-  }
-  .tituloSecundario {
-    font-size: 16px;
-    line-height: 17px;
-  }
-  h1.Projeto {
-    font-size: 32px;
-    line-height: 34px;
-  }
+div.separador {
+  z-index: 1;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  width: 20%;
+  height: 12px;
+  background-color: #2c6fa3;
 }
 .textoCorrido {
   font-family: 'Regular', sans-serif;
@@ -548,13 +494,39 @@ footer {
 .textoAzul {
   color: #2c6fa3;
 }
+@media screen and (max-width: 1440px) {
+  .tituloPrincipal,
+  h2.Projeto {
+    font-size: 32px;
+    line-height: 34.5px;
+  }
+  .textoCorrido {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .tituloSecundario {
+    font-size: 16px;
+    line-height: 20x;
+  }
+  .textoLegenda {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  h1.Projeto {
+    font-size: 32px;
+    line-height: 34.5px;
+  }
+  div.separador {
+    margin-top: 8px;
+    margin-bottom: 16px;
+    height: 6px;
+  }
+}
 /* Estilos para vídeos de projetos */
 iframe {
   background-color: #2c6fa3;
 }
 .vBbox {
-  padding-top: 16px;
-  padding-bottom: 16px;
   width: 100%;
   height: 100%;
 }
@@ -591,14 +563,6 @@ iframe {
 .boxPreto {
   background-color: #262520;
 }
-.separador {
-  z-index: 1;
-  margin-top: 16px;
-  margin-bottom: 32px;
-  width: 20%;
-  height: 12px;
-  background-color: #2c6fa3;
-}
 .progress-container {
   position: fixed;
   top: 0;
@@ -624,6 +588,9 @@ iframe {
   justify-content: center;
   align-items: flex-end;
 }
+/* #section2 {
+  height: 1024px;
+}*/
 .imagens {
   display: flex;
   margin-top: 16px;
@@ -641,4 +608,18 @@ iframe {
 .inverteCor:hover {
   filter: invert(100%);
   transition: 0.5s ease;
+}
+.containerBase {
+  padding-top: 96px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+}
+@media (max-width: 768px) {
+  .containerBase {
+    padding-top: 64px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+  }
 }

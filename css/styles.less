@@ -6,10 +6,6 @@
 @corBranco: #FFFFFF;
 @corPreto: #262520;
 
-@paddingTopFull: 96px;
-@paddingSideFull: 64px:
-@paddingBottomFull: 16px;
-
 .font-face(@font-family, @filepath){
     @font-face {
         font-family: @font-family;
@@ -21,6 +17,9 @@
 .font-face('SemiBold', 'WorkSans/WorkSans-SemiBold');
 .font-face('SemiBold', 'WorkSans/WorkSans-SemiBold');
 
+@pTop: 96px;
+@pSide: 32px;
+@pBottom: 32px;
 
 .bounce(@nomeAnim, @varIn, @varBounce){
   @keyframes @nomeAnim {
@@ -60,10 +59,6 @@ p.msc {color: @corMsc;}
 p.branco {
 	color: @corBranco;
 	text-decoration: none;
-}
-
-.containerBase {
-	padding: 96px 64px 16px 64px;
 }
 
 /* LINKS EM GERAL */
@@ -179,6 +174,7 @@ a.outro::after {
 }
 a.outro:hover::after {width: 100%}
 
+/* classes gerais */
 h1 {
 	font-family: 'Regular', sans-serif;
 	font-style: normal;
@@ -232,53 +228,8 @@ footer {
 	text-align: center;
 }
 
-/*classes usadas pra fazer o popup de vídeos da home*/
-
-.tooltip {
-	display: inline-block;
-	font-family: 'SemiBold', sans-serif;
-    text-decoration:none;
-    position:relative;
-}
-
-.tooltip::after {
-	content: '';
-	display: block;
-	width: 0;
-	height: 2px;
-	background: currentColor;
-	transition: width .3s;
-}
-
-.tooltip span {
-    display:none;
-}
-.tooltip:hover span {
-	width: 320px;
-	height: 180px;
-    display:block;
-    position:fixed;
-    overflow:hidden;
-    z-index: 1;
-    box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.54);
-    transform-origin: center bottom;
- 	animation-name: gira;
-    animation-duration: .3s;
-}
-
-.tooltip:hover::after {width: 100%;}
-
-@keyframes gira {
-  from {
-    transform: translateY(70px) rotate(-30deg);
-    opacity: 0;
-    animation-timing-function: cubic-bezier(.35,.18,.17,.99);
-  }
-  to {
-    transform: translateY(0px) rotate(0deg);
-    opacity: 1;
-    animation-timing-function: cubic-bezier(.35,.18,.17,.99);
-  }
+.containerBase {
+	padding-top: 96px;
 }
 
 /* estilos das thumbs da home */
@@ -307,11 +258,6 @@ footer {
 	opacity: 0.7;
 }
 
-.imgThumb {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-}
 
 .videoThumb {
 	position: absolute;
@@ -387,7 +333,7 @@ footer {
 	display: block;
 	width:80px;
 	max-width:100%;
-	vertical-align: 50%;
+	/*vertical-align: 50%;*/
 	padding: 10%;
 
 }
@@ -434,7 +380,7 @@ footer {
 .contentMsc {
 	left: 2%;
 	width: 94%;
-	background-color: @corBranco;
+	background-color: @corPreto;
 	padding: 65px;
 	flex-wrap: wrap;
 	flex-shrink: 2;
@@ -495,13 +441,6 @@ footer {
 @media screen and (max-width: 768px) {
 	.mscText {
 		height: 100%;}
-	
-	.containerBase {
-		padding-top: @paddingTopFull / 2;
-		padding-right: @paddingSideFull / 2;
-		padding-left: @paddingSideFull / 2;
-		padding-bottom: @paddingBottomFull / 2;
-	}
 }
 
 .perfil {
@@ -544,9 +483,9 @@ footer {
 
 /* Estilos das páginas de Projeto */
 @tamTit: 64px;
-@entreTit: 68px;
+@entreTit: 69px;
 @tamSubTit: 32px;
-@entreSubTit: 34px;
+@entreSubTit: 40x;
 
 .tituloPrincipal {
   font-family: 'SemiBold', sans-serif;
@@ -565,57 +504,81 @@ footer {
   letter-spacing: -0.01em;
 }
 
-@media (max-width: 1280px) {
-  .tituloPrincipal, .textoCorrido, h2.Projeto {
+div.separador {
+	z-index: 1;
+	margin-top: 16px;
+	margin-bottom: 32px;
+	width: 20%;
+	height: 12px;
+	background-color: @corDsg;
+}
+
+.textoCorrido {
+	font-family: 'Regular', sans-serif;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 28px;
+}
+
+.textoLegenda {
+	display: flex;
+	padding: 16px;
+	font-family: 'SemiBold', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
+	align-items: flex-end;
+}
+  
+  .alinhaEmbaixo {
+	display: flex;
+	align-items: flex-end;
+}
+
+.textoBranco {color: @corBranco;}
+.textoAzul {color: @corDsg;}
+
+@media screen and (max-width: 1440px) {
+  .tituloPrincipal, h2.Projeto {
     font-size: @tamTit / 2;
     line-height: @entreTit / 2;
+  }
+
+  .textoCorrido {
+	font-size: 16px;
+	line-height: 18px;
   }
   
   .tituloSecundario {
     font-size: @tamSubTit / 2;
     line-height: @entreSubTit / 2;	  
   }
+
+  .textoLegenda {
+	  font-size: 14px;
+	  line-height: 16px;
+  }
   
   h1.Projeto {
 	font-size: @tamTit / 2;
 	line-height: @entreTit / 2;
   }
+
+  div.separador {
+	margin-top: 8px;
+	margin-bottom: 16px;
+	height: 6px;
+  }
 }
-
-
-.textoCorrido {
-  font-family: 'Regular', sans-serif;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 28px;
-}
-
-.textoLegenda {
-  display: flex;
-  padding: 16px;
-  font-family: 'SemiBold', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
-  align-items: flex-end;
-}
-
-.alinhaEmbaixo {
-  display: flex;
-  align-items: flex-end;
-}
-
-.textoBranco {color: @corBranco;}
-.textoAzul {color: @corDsg;}
 
 /* Estilos para vídeos de projetos */
 iframe {
   background-color: @corDsg;
 }
 .vBbox {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  //padding-top: 16px;
+  //padding-bottom: 16px;
   width: 100%;
   height: 100%;
 }
@@ -657,14 +620,6 @@ iframe {
   background-color: @corPreto;
 }
 
-.separador {
-  z-index: 1;
-  margin-top: 16px;
-  margin-bottom: 32px;
-  width: 20%;
-  height: 12px;
-  background-color: @corDsg;
-}
 
 .progress-container {
   position: fixed;
@@ -694,9 +649,9 @@ iframe {
   align-items: flex-end;
 }
 
-#section2 {
-  //height: 1024px;
-}
+/* #section2 {
+  height: 1024px;
+}*/
 
 .imagens {
   display: flex;
@@ -718,4 +673,20 @@ iframe {
 .inverteCor:hover {
   filter: invert(100%);
   transition: .5s ease;
+}
+
+.containerBase {
+	padding-top: 96px;
+	padding-left: 32px;
+	padding-right: 32px;
+	padding-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+	.containerBase {
+		padding-top: 64px;
+		padding-left: 16px;
+		padding-right: 16px;
+		padding-bottom: 16px;	
+	}
 }

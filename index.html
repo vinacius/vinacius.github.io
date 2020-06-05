@@ -36,28 +36,26 @@
 	<!-- End Google Tag Manager (noscript) -->
 
 	<!-- Menu -->
-	<nav class="navbar navbar-expand-lg fixed-top navbar-dark" role="navigation"> <!-- Logo -->
+	<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+		<!-- Logo -->
 		<a class="navbar-brand" href="#">
 			<img src="/images/logo_branco.svg" width="42" height="42" alt="Vinicius Franco">
 		</a>
 
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="true" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
-		<div class="collapse navbar-collapse" id="navbarMenu">
-			<ul class="navbar-nav">
+		<div class="collapse navbar-collapse d-flex justify-content-end">
+			<ul class="nav navbar-nav" id="navbarMenu">
 				<li class="nav-item">
 					<a class="nav-link menu textoCorrido" href="/">Design</a>
-					</li>
-					<li class="nav-item">
+				</li>
+				<li class="nav-item">
 					<a class="nav-link menu textoCorrido" href="/musica">Música</a>
-					</li>
-					<li class="nav-item">
+				</li>
+				<li class="nav-item">
 					<a class="nav-link menu textoCorrido" href="#Sobre">Sobre</a>
-					</li>
-					<li class="nav-item">
-					<a class="nav-link menu textoCorrido" href="#">Contato</a>
 				</li>
 			</ul>
 		</div>
@@ -75,10 +73,10 @@
 						</div>
 					</div>
 
-					<img class="imgThumb" src="/images/selecao_840.jpg"></img>
+					<img width="100%" height="100%" src="/images/selecao_840.jpg"></img>
 				
 					<video class="videoThumb" controls="false"
-					autoplay muted loop src="/videos/selecao_840x473.mp4" alt="Olimpíadas">
+					autoplay muted loop src="/videos/selecao_840x473_1.mp4" alt="Seleção Sportv">
 					</video>
 				</a>				
 			</div>
@@ -94,7 +92,7 @@
 					<img width="100%" height="100%" src="/images/eventos_840.jpg"></img>
 
 					<video class="videoThumb" controls="false"
-					autoplay muted loop src="/videos/sportv_840x473.mp4" alt="Olimpíadas">
+					autoplay muted loop src="/videos/sportv_840x473_1.mp4" alt="Eventos Sportv">
 					</video>
 				</a>
 			</div>
@@ -110,41 +108,41 @@
 					<img width="100%" height="100%" src="/images/rio2016_840.jpg"></img>
 
 					<video class="videoThumb" controls="false"
-					autoplay muted loop src="/videos/rio2016_840x473.mp4" alt="Olimpíadas">
+					autoplay muted loop src="/videos/rio2016_840x473_1.mp4" alt="Olimpíadas">
 					</video>
 				</a>
 			</div>
 		</div>
 		<div class="row no-gutters" style="padding:0px;">			
 			<div class="col-md-4">
-				<a href="#">
+				<a class="thumb" href="#">
 					<div class="overlay">
 						<div class="thumbTexto">
-							<span class="textoCorrido textoBranco">Slap música 10 anos<br><b>2018</b></span>
+							<span class="textoCorrido textoBranco">Slap 10 anos<br><b>2018</b></span>
 						</div>
 					</div>
-
+					
 					<img width="100%" height="100%" src="/images/slap_840.jpg"></img>
 
-					<!-- video width="100%" height="100%" controls="false"
-					autoplay muted loop src="/videos/sportv_840x473.mp4" alt="Olimpíadas">
-					</video> -->
+					<video class="videoThumb" controls="false"
+					autoplay muted loop src="/videos/slap_840x473.mp4" alt="Slap 10 anos">
+					</video>
 				</a>
 			</div>
 
 			<div class="col-md-4">
-				<a href="#">
+				<a class="thumb" href="#">
 					<div class="overlay">
 						<div class="thumbTexto">
 							<span class="textoCorrido textoBranco">Beatbit<br><b>2013</b></span>
 						</div>
 					</div>
-
+					
 					<img width="100%" height="100%" src="/images/beatbit_840.jpg"></img>
 
-					<!-- <video width="100%" height="100%" controls="false"
-					autoplay muted loop src="/videos/sportv_840x473.mp4" alt="Olimpíadas">
-					</video> -->
+					<video class="videoThumb" controls="false"
+					autoplay muted loop src="/videos/beatbit_840x473.mp4" alt="Beatbit">
+					</video>
 				</a>
 			</div>
 
@@ -152,11 +150,11 @@
 	</div>
 
 	<!-- Sobre -->    
-	<div class="container-fluid">
-		<div id="Sobre" class="row" style="padding:96px 32px 16px 32px;">
+	<div class="container-fluid  containerBase">
+		<div id="Sobre" class="row">
 			<!-- Video -->
-			<div class="col-md-8 vBbox">
-				<img width="100%" height="100%" src="/images/paris_16x9_low.jpg" alt="Foto Vinícius Franco">
+			<div class="col-md-8 no-gutters vBox">
+				<img class="imagens" src="/images/paris_16x9_low.jpg" alt="Foto Vinícius Franco">
 				</img>
 			</div>
 			<!-- Texto -->
@@ -170,11 +168,15 @@
 					bandas e projetos musicais.<br>
 					Quer trocar uma ideia? Me mande um email! <b>vinacius.fs[a]gmail.com</b>
 					</p>
-				<br><br>
+				<br>
 				<div class="separador"></div>
 			</div>
 		</div>
 	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 
 <footer>
