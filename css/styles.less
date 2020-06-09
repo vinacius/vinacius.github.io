@@ -61,6 +61,29 @@ p.branco {
 	text-decoration: none;
 }
 
+.tituloGeral {
+	padding-left: 32px;
+	align-self: center;
+	font-family: 'Medium', sans-serif;
+	font-size: 32px;
+	line-height: 68px;
+	letter-spacing: 0.3em;
+}
+
+@media (max-width: 768px) {
+	.tituloGeral {
+		padding-left: 16px;
+		font-size: 16px;;
+	}
+}
+
+@media(max-width: 512px) {
+	.tituloGeral {
+		font-size: 8px;
+		opacity: 0;
+	}
+}
+
 /* LINKS EM GERAL */
 a.bigTitle {
 	font-family: 'SemiBold', sans-serif;
@@ -160,7 +183,7 @@ a.dsg:hover::after {width: 100%}
 
 a.outro, a.outro:visited {
 	display: inline-block;
-	color: @corPreto;
+	color:currentColor;
 	text-decoration: none;
 	font-family: 'SemiBold', sans-serif;
 	}
@@ -169,7 +192,7 @@ a.outro::after {
 	display: block;
 	width: 0;
 	height: 2px;
-	background: @corPreto;
+	background: currentColor;
 	transition: width .3s;
 }
 a.outro:hover::after {width: 100%}
@@ -520,6 +543,21 @@ div.separador {
 	line-height: 28px;
 }
 
+.textoMenu {
+	font-family: 'Regular', sans-serif;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 28px;
+}
+
+@media (max-width: 768px) {
+	.textoMenu {
+		font-size: 64px;
+		line-height: 68px;
+		color: rgb(255, 255, 255, 1.0) !important;
+	}
+}
+
 .textoLegenda {
 	display: flex;
 	padding: 16px;
@@ -689,4 +727,5 @@ iframe {
 		padding-right: 16px;
 		padding-bottom: 16px;	
 	}
+
 }
