@@ -21,11 +21,15 @@
     <meta property="og:type" content="Portifolio">
     <meta property="og:description" content="Projeto de branding do Sportv para a transmissão dos Jogos Olímpicios Rio 2016">
 
-    <link href="/libs/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet/less" type="text/css" href="styles.less" />
     <link href="/css/styles.css" rel="stylesheet" type="text/css" />
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" defer integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" defer integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" defer integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
   </head>
 
@@ -63,7 +67,7 @@
     </nav>
 
     <!-- Capa -->    
-    <div class="row containerBase">
+    <div class="row containerCapa">
         <!-- Video -->
         <div class="col-md-8 vBbox">
           <video width="100%" height="100%" controls="false"
@@ -71,14 +75,14 @@
           </video>
         </div>
         <!-- Texto -->
-        <div class="col-md-4" style="padding-top: 16px;">
+        <div class="col-md-4 textoCapa" style="padding-top: 16px;">
           <div>
               <h1 class="Projeto">Slap Música 10 anos</h1>
               <span class="tituloSecundario">Animações para projeção mapeada que aconteceu 
                 na festa de 10 anos da gravadora Slap música.</span>
               <br><br>
               <span class="textoCorrido">Freelance <b>
-                <br>2018</b></span>
+                <br>2017</b></span>
               <div class="separador"></div>
               <span class="textoCorrido"> <a href="#section2">veja mais 👇🏾</a></span>
           </div>
@@ -86,7 +90,7 @@
     </div>
 
     <!-- Sessão 1 -->
-    <div id="section2" class="container boxPreto containerBase">
+    <div id="section2" class="boxPreto containerBase">
       <div class="row">
         <div class="col-md-4" style:"display:flex;">
           <h1 class="Projeto textoBranco">O briefing</h1>
@@ -96,7 +100,7 @@
             que em 2017 completou 10 anos. Para comemorar, eles fizeram uma grande festa no 
             Parque Lage, no Rio de Janeiro, e nos chamaram para produzir uma projeção mapeada 
             contando essa trajetória.</p>
-          <div class="col-md-8 offset-md-4 order-2 order-md-1 textoLegenda textoAzul">  
+          <div class="col-md-8 offset-md-4 order-2 order-md-1 textoLegenda textoAzul alinhaEmbaixo">  
             O principal desafio foi criar um visual que funcionasse com a identidade da 
             Slap mas que imprisse bem na projeção, e que conseguisse integrar a estética 
             do "desenho rabiscado" com as capas dos lançamentos que fizeram parte desses dez anos.
@@ -117,20 +121,20 @@
     </div>
 
     <!-- Sessão 2 -->
-    <div class="container containerBase">
-      <div class="row">
+    <div class="containerBase" style="background-color: black;">
+      <div class="row videosSlap">
         <video width="100%" height="100%" controls="false"
         autoplay muted loop src="videos/slap_video1.mp4" alt="Slap 10 anos">
         </video>
       </div>
 
-      <div class="row">
+      <div class="row videosSlap">
         <video width="100%" height="100%" controls="false"
         autoplay muted loop src="videos/slap _video2.mp4" alt="Slap 10 anos">
         </video>
       </div>
 
-      <div class="row">
+      <div class="row videosSlap">
         <video width="100%" height="100%" controls="false"
         autoplay muted loop src="videos/slap_video3.mp4" alt="Slap 10 anos">
         </video>
@@ -154,7 +158,7 @@
       </div>
     </div>
     <footer>
-    		<p class="branco">Desenvolvido por <a class="branco" href="http://viniciusfranco.me">Vinícius Franco | 2019</a></p>
+    		<p class="branco">Desenvolvido por <a class="branco" href="/">Vinícius Franco | 2020</a></p>
 
     		<a href="https://www.linkedin.com/in/vfrancos/" target="_blank">
     		<img alt="linkedin" class="icones" src="/images/linkedin_w.svg"></img></a>
@@ -178,10 +182,5 @@
         document.getElementById("myBar").style.width = scrolled + "%";
       }
     </script>
-  
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
   </body>
 </html>

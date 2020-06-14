@@ -21,70 +21,257 @@
     <meta property="og:type" content="Portifolio">
     <meta property="og:description" content="Projeto de branding do Sportv para a transmissão dos Jogos Olímpicios Rio 2016">
 
-    <link href="/libs/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet/less" type="text/css" href="styles.less" />
     <link href="/css/styles.css" rel="stylesheet" type="text/css" />
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" defer integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" defer integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" defer integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
   </head>
 
-  <div class="progress-container"> <!-- Progresso de Letura -->
+   <!-- Progresso de Letura -->
+  <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
   </div>
+
   <body>
-	<!-- Menu -->
-	<nav class="navbar navbar-expand-lg fixed-top navbar-light">
-		<!-- Logo -->
-		<a class="navbar-brand" href="#">
-			<img src="/images/logo_branco.svg" width="42" height="42" alt="Vinicius Franco">
-			<!-- <span class="tituloGeral">VINÍCIUS FRANCO</span> -->
-		</a>
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="/images/logo_branco.svg" width="42" height="42" alt="Vinicius Franco">
+        <!-- <span class="tituloGeral">VINÍCIUS FRANCO</span> -->
+      </a>
 
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-		<div class="collapse navbar-collapse" id="navbarMenu">
-			
-			<ul class="nav navbar-nav ml-auto">
-				<li class="nav-item active">
-					<a class="nav-link menu textoMenu" href="/">Design</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link menu textoMenu" href="/musica">Música</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link menu textoMenu" href="#Sobre">Sobre</a>
-				</li>
-			</ul>
-			
-		</div>
-	</nav>
-
-  <!-- Capa -->    
-  <div class="row containerBase">
-      <!-- Video -->
-      <div class="col-md-8 vBbox">
-        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/412906465?autoplay=1&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link menu textoMenu" href="/">Design</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link menu textoMenu" href="/musica">Música</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link menu textoMenu" href="#Sobre">Sobre</a>
+          </li>
+        </ul>
+        
       </div>
-      <!-- Texto -->
-      <div class="col-md-4" style="padding-top: 16px;">
-        <div>
-            <h1 class="Projeto">Seleção Sportv 2019</h1>
-            <span class="tituloSecundario">Projeto de identidade para programa Seleção 
-              Sportv, que em 2018 passou a utilizar o novo estúdio do canal.</span>
-            <br><br>
-            <span class="textoCorrido"><b>Globosat</b> Comunicação & Branding <b>
-              <br>2019</b></span>
-            <div class="separador"></div>
-            <span class="textoCorrido"> <a href="/">mais detalhes em breve! 👨🏾‍💻</a></span>
-        </div>
-    </div>
-  </div>
+    </nav>
 
+    <!-- Capa -->    
+    <div class="row containerCapa">
+        <!-- Video -->
+        <div class="col-md-8 vBbox">
+          <div style="padding:56.25% 0 0 0;position:relative;">
+            <iframe src="https://player.vimeo.com/video/412906465?autoplay=1&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay muted; fullscreen" allowfullscreen></iframe>
+          </div>
+          <script src="https://player.vimeo.com/api/player.js"></script>
+        </div>
+        <!-- Texto -->
+        <div class="col-md-4 textoCapa">
+          <div>
+              <h1 class="Projeto">Seleção Sportv 2019</h1>
+              <span class="tituloSecundario">Projeto de identidade para programa Seleção 
+                Sportv, que em 2018 passou a utilizar o novo estúdio do canal.</span>
+              <br><br>
+              <span class="textoCorrido"><b>Globosat</b> Comunicação & Branding <b>
+                <br>2019</b></span>
+              <div class="separador"></div>
+              <span class="textoCorrido"> <a href="#section2">veja mais 👇🏾</a></span>
+          </div>
+      </div>
+    </div>
+
+    <!-- Sessão 1 -->
+    <div id="section2" class="boxPreto containerBase">
+      <div class="row">
+        <div class="col-md-4" style:"display:flex;">
+          <h1 class="Projeto textoBranco">O briefing</h1>
+          <div class="separador"></div>
+          <p class="textoCorrido textoBranco">
+            O programa nasceu em 2013, e desde então ganhou uma série de formatos. 
+            Depois das Olimpíadas e da Copa do Mundo, ele ganhou o formato atual, 
+            acompanhando o dia-a-dia do futebol, e desde então é o programa mais 
+            competitivo do canal, sendo transmitido no horário mais concorrido.</p>
+        </div>
+        <div class="col-md-8">
+          <video autoplay muted loop class="imagens">
+            <source src="videos/ss_CLASS.mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 order-1 order-md-2">
+          <img src="images/ss_PERFIL_CAMPEONATO.jpg" class="imagens"></img>
+        </div>
+        <div class="col-md-6 order-1 order-md-2">
+          <img src="images/ss_CHAMADA_2.jpg" class="imagens"></img>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+          <video autoplay muted loop class="imagens">
+            <source src="videos/ss_CHAMADA.mp4">
+          </video>
+        </div>
+        <div class="col-md-4">
+          <img src="images/ss_RESULTADOS.jpg" class="imagens"></img>
+          
+          <div class="col-md-6 order-2 order-md-1 textoLegenda textoAzul alinhaEmbaixo">  
+            O programa precisava ter o valor da “seleção”, mas ser jovem e dinâmico. 
+            Além disso, a ideia era se aproveitar das cores dos clubes e eventos, 
+            para deixar a transmissão diversificada.
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 order-1 order-md-2">
+          <img src="images/ss_TJ_POP_UP.jpg" class="imagens"></img>
+        </div>
+        <div class="col-md-6 order-1 order-md-2">
+          <img src="images/ss_CARDS.jpg" class="imagens"></img>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sessão 2 -->
+    <div class="containerBase">
+      <div class="row">
+        <div class="col-md-4" style:"display:flex;">
+          <h1 class="Projeto textoPreto">A manchete</h1>
+          <div class="separador"></div>
+          <p class="textoCorrido textoPreto">
+            A principal peça utilizada no programa é a manchete, 
+            uma tarja que contextualiza o assunto debatido no momento. 
+            Ela fica inserida na tela praticamente durante todo o programa, 
+            de forma que pensamos maneiras eficientes de complementar o debate. 
+            A partir desse desenho, a peça virou um elemento prioritário nas 
+            transmissões de programas do Sportv.</p>
+          <div class="col-md-6 offset-md-6 order-2 order-md-1 textoLegenda textoAzul alinhaEmbaixo">  
+              A manchete possui uma iconografia que contempla todos os contextos, 
+              e um texto responsivo, que aumenta ou diminui de acordo com a quantidade de caracteres.
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <video autoplay muted loop class="imagens">
+            <source src="videos/ss_MANCHETE.mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 order-1 order-md-2">
+          <img src="images/ss_MANCHETE_2.jpg" class="imagens"></img>
+        </div>
+        <div class="col-md-6 order-1 order-md-2">
+          <img src="images/ss_MANCHETE_3.jpg" class="imagens"></img>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sessão 3 -->
+    <div class="containerBase">
+      <!-- Cabeçalho seção -->
+      <div class="row">
+        <!-- Titulo -->
+        <div class="col-md-4 order-1">
+          <div class="order-1">
+            <h1 class="Projeto">O estúdio</h1>
+            <div class="separador"></div>
+            <p class="textoCorrido">Para as chamadas de programação
+              (promos), uma estrutura modular baseada na duração e objetivo de
+              cada peça, além de um pacote gráfico restrito e específico, o que
+              facilita o trabalho dos editores e garante a manutenção da identidade.</p>
+            </div>
+          <div class="col-md-6 offset-md-6 order-2 order-md-1 textoLegenda textoAzul alinhaEmbaixo">  
+            O programa precisava ter o valor da “seleção”, mas ser jovem e dinâmico. 
+            Além disso, a ideia era se aproveitar das cores dos clubes e eventos, 
+            para deixar a transmissão diversificada.
+          </div>
+        </div>
+
+        <!-- Video -->
+        <div class="col-md-8 order-2">
+          <video autoplay muted loop class="imagens">
+            <source src="videos/ss_ESTUDIO.mp4">
+          </video>
+        </div>
+
+      </div>
+
+      <div class="row" style="padding: 0px;">
+        <div class="col-md-8" >
+          <video autoplay muted loop class="imagens">
+            <source src="videos/ss_CHAMADA_2.mp4">
+          </video>
+        </div>
+        <div class="col-md-4">
+          <img src="images/ss_ESTUDIO_5.jpg" class="imagens"></img>
+          <img src="images/ss_ESTUDIO_3.jpg" class="imagens"></img>
+        </div>
+      </div>
+
+      <div class="row" style="padding: 0px;">
+        <div class="col-md-2 textoLegenda textoAzul alinhaEmbaixo">  
+          O programa precisava ter o valor da “seleção”, mas ser jovem e dinâmico. 
+          Além disso, a ideia era se aproveitar das cores dos clubes e eventos, 
+          para deixar a transmissão diversificada.
+        </div>
+        <div class="col-md-10">
+          <img src="images/ss_TELAO_PERFIS.jpg" class="imagens"></img>
+          <img src="images/ss_TELAO_SELO_TIMES.jpg" class="imagens"></img>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <img src="images/ss_TELAO_ESCALACAO_MOSAICO.jpg" class="imagens"></img>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <img src="images/ss_TELAO_CAMPINHOS.jpg" class="imagens"></img>
+        </div>
+      </div>
+    </div>
+
+    <!--Fechamento-->
+    <div class="containerBase">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="separador"></div>
+          <p class="textoCorrido">
+              Globosat <b>Comunicação & Branding</b><br>
+              <b>2019</b><br>
+              <br>
+              Diretor Criativo <b>Ricardo Moyano</b><br>
+              Coordenador Criativo <b>Julio Marcello</b><br>
+              Coordenador Digital <b>Renan Barros</b><br>
+              Sound Branding <b>Conrado Kempers</b><br>
+              Diretor de Arte <b>Julio Marcello</b><br>
+              Designers <b>Diego Galluzo, Vinícius Franco</b><br>
+              Designers Assistentes <b>Bruno Marques, Julia Ayres e Rafael Braz</b><br>
+          </p>
+        </div>
+      </div>
+    </div>
     <footer>
-    		<p class="branco">Desenvolvido por <a class="branco" href="http://viniciusfranco.me">Vinícius Franco | 2019</a></p>
+    		<p class="branco">Desenvolvido por <a class="branco" href="/">Vinícius Franco | 2020</a></p>
 
     		<a href="https://www.linkedin.com/in/vfrancos/" target="_blank">
     		<img alt="linkedin" class="icones" src="/images/linkedin_w.svg"></img></a>
@@ -96,7 +283,7 @@
     		<a href="https://twitter.com/vinacius" target="_blank"><img alt="twitter" class="icones" src="/images/twitter_w.svg"></img></a>
     </footer>
 
-    <script scr="http://localhost:35729/livereload.js"></script> <!-- Sessão 2 -->
+    <script scr="http://localhost:35729/livereload.js"></script>
     <script>
       // When the user scrolls the page, execute myFunction
       window.onscroll = function() {myFunction()};
@@ -108,10 +295,6 @@
         document.getElementById("myBar").style.width = scrolled + "%";
       }
     </script>
-  
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
   </body>
 </html>
