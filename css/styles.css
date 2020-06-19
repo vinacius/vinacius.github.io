@@ -58,6 +58,9 @@ p.branco {
   line-height: 68px;
   letter-spacing: 0.3em;
 }
+.Principal {
+  padding: 96px 16px 16px 16px !important;
+}
 @media (max-width: 768px) {
   .tituloGeral {
     padding-left: 16px;
@@ -266,11 +269,11 @@ footer {
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: 0;
+  opacity: 1;
   transition: 0.5s ease;
 }
 .overlay:hover ~ .videoThumb {
-  opacity: 1;
+  opacity: 0;
 }
 .thumbTexto {
   display: flex;
@@ -691,6 +694,10 @@ iframe {
   padding-right: 0px !important;
   padding-bottom: 0px;
 }
+.FixDiv {
+  position: fixed;
+  padding: 0px 32px 16px 16px !important;
+}
 @media (max-width: 768px) {
   .containerBase {
     padding-top: 64px;
@@ -703,6 +710,10 @@ iframe {
     padding-left: 16px;
     padding-right: 16px;
     padding-bottom: 16px;
+  }
+  .FixDiv {
+    position: relative;
+    padding: 16px 16px 16px 16px !important;
   }
 }
 @media (max-width: 768px) {
