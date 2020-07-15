@@ -34,10 +34,32 @@ footer {
   background-color: #FFFFFF;
   scroll-behavior: smooth;
 }
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
 p {
   font-family: 'Regular', sans-serif;
   color: #262520;
   margin-bottom: 8px;
+}
+main {
+  padding: 0px;
+  position: relative;
+  min-height: 100vh;
+  margin: 0 auto -128px;
+}
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 128px;
+  padding: 16px;
+  background-color: #262520;
+  fill: #262520;
+  text-align: center;
 }
 ::selection {
   color: #FFFFFF;
@@ -72,6 +94,23 @@ p.branco {
     font-size: 8px;
     opacity: 0;
   }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #262520;
+  width: 4px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #262520;
 }
 /* LINKS EM GERAL */
 a.bigTitle {
@@ -232,13 +271,6 @@ h2.Projeto {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-}
-footer {
-  margin: auto;
-  padding: 20px;
-  background-color: #262520;
-  fill: #262520;
-  text-align: center;
 }
 .containerBase {
   padding-top: 96px;
