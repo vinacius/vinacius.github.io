@@ -8,6 +8,14 @@
 .font-face('Medium', 'SourceCodePro-Medium');
 .font-face('SemiBold', 'SourceCodePro-SemiBold');
 
+@tamH1: 64px;
+@tamH2: 32px;
+
+::selection {
+    background-color: black;
+    opacity: 1;
+}
+
 body {
     padding: 0;
     box-sizing: border-box;
@@ -15,19 +23,68 @@ body {
     background-color: black;
 }
 
-.grid {
+h1 {
+    font-family: 'Regular', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: @tamH1;
+    line-height: 80px;
+    text-align: center;
+    letter-spacing: 0.5em;
+    color: #FFFFFF;
+    margin: 0px;
+}
+
+h2 {
+    font-family: 'Regular', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 0.25em;
+    color: #FFFFFF;
+    margin: 0px;
+}
+
+
+main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 100vh;
     grid-gap: 16px;
+    max-height: 980px;
+
+}
+
+ul {
+    display: block;
+    padding: 0px;
+}
+
+ui {
+    display: flex;
 }
 
 .principal {
     padding-top: 48px;
+    height: 100%;
 }
 
 .menu {
     padding-left: 0px;
+}
+
+.linhaMenu {
+    justify-content: right;
+    left: 10%;
+    right: -50%;
+    background-color: white;
+    height: 4px;
+    width: 100px;
+    margin-left: 8px;
+    align-self: center;
+    opacity: 0;
 }
 
 .logo {
@@ -62,6 +119,10 @@ body {
     color: #FFFFFF;
 }
 
+.centraTexto {
+    text-align: center;
+}
+
 .limpaMargens {
     margin: 0px;
 }
@@ -78,7 +139,11 @@ body {
     font-size: 32px;
     line-height: 40px;
     color: #FFFFFF;
-    margin-top: 8;
+    margin-top: 4px;
+}
+
+.centraTexto {
+    text-align: center;
 }
 
 a {
@@ -98,31 +163,116 @@ a:hover {
 }
 
 .videoDestaque {
-    width: 530px;
-    height: 298px;
+    width: 676px;
+    height: 380px;
 }
 
 .logoStr {
-    width: 160px;
+    width: 80%;
+    //padding-right: 18px;
 }
 
 .containerLogos {
+    margin-top: 8px;
     display: flex;
-    flex-direction: column;
-    //position: relative;
-    //padding-top: 0px;
+    flex-direction: row;
+    justify-content: center;
+    //align-self: flex-start;
 }
 
 .line {
-    background-color; 0px;
+    background-color: 0px;
     width: 60px;
     height: 4px;
     display: none;
 }
 
+// ESTILOS DA SECAO DISCOGRAFIA
+
+.bgCapas {
+    display: block;
+    background-color: black;
+    z-index: 1;
+    width: 100%;
+}
+
+.containerTitulo {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    width: 100%;
+}
+
+.capas {
+    display: flex;
+}
+
+.imgCapas {
+    //position: relative;
+    //z-index: -100;
+    margin: 0;
+    padding: 0px;
+    border: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.capas:hover {
+    transition: .7s ease;
+    filter: invert(100%);
+}
+
+.textoCapas {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    align-self: center;
+}
+
+
+// ESTILOS DA SECAO SOBRE
+
+.gridConteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 635px;
+    grid-gap: 16px;
+}
+
+.textoSobre {
+}
+
+.fotoBio {
+    max-width: 712px;
+}
+
+.cropCapa {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
 
 @media (max-width: 768px) {
-    .grid {
+    h1 {
+        font-size: @tamH1 / 2;
+        line-height: 40px;
+        letter-spacing: 0.25em;
+    }
+
+    h1.disco {
+        font-size: 21px;
+        line-height: 24px;
+        opacity: 1;
+    }
+
+    h2 {
+        font-size: 21px;
+        line-height: 20px;
+    }
+
+    main {
         display: block;
     }
 
@@ -143,14 +293,15 @@ a:hover {
 
     .videoDestaque {
         width: 100%;
+        height: 208px;
         align-self: flex-end;
         order: 2;
     }
 
     .containerLogos {
-        flex-direction: row;
-        align-self: flex-start;
-        order: 1;
+        margin-bottom: 16px;
+        //align-self: flex-start;
+        //order: 1;
     }
 
     .logoStr {
@@ -165,5 +316,36 @@ a:hover {
 
     .line {
         display: block;
+    }
+    
+    .gridConteudo {
+        display: block;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .containerTitulo {
+        padding-top: 7.4%;
+        padding-bottom: 7.4%;
+    }
+
+    .textoSobre {
+        padding-top: 8px;
+    }
+
+    .fotoBio {
+        width: 100%;
+    }
+
+    .capas {
+        display: block;
+        height: 200px;
+    }
+
+    .textoCapas {
+        padding-top: 20%;
+    }
+
+    .linhaMenu {
+        opacity: 1;
     }
 }

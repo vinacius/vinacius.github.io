@@ -9,59 +9,128 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div class="grid">
-        <div></div>
+    <!-- PAGINA PRINCIPAL -->
+    <main>
         <div></div>
         <div class="principal"> <!-- PRINCIPAL -->
             <img class ="logo" src="assets/espinoza_logo.png"></img>
             <div class="texto menu">
-                <p>
-                    <a class="underline" href="#">Sobre</a>
-                    <br>
-                    <a class="underline" href="https://drive.google.com/drive/folders/1BmeeFZDsfcOc7gZXbIb9mbjxnLZjnOSj?usp=sharing" target="_blank">Press Kit</a>
-                </p>
+                <ul>
+                    <ui>
+                        <a class="underline" href="#Sobre">Sobre </a>
+                        <div class="linhaMenu"></div>
+                    </ui>
+                    
+                    <ui>
+                        <a class="underline" href="#Discos">Discografia</a>
+                        <div class="linhaMenu"></div>
+                    </ui>
+                    
+                    <ui>
+                        <a class="underline" href="https://drive.google.com/drive/folders/1BmeeFZDsfcOc7gZXbIb9mbjxnLZjnOSj?usp=sharing" target="_blank">Press Kit</a>
+                        <div class="linhaMenu"></div>
+                    </ui>
+                </ul>
                 
-                <p>
-                    <a class="underline" href="http://www.instagram.com/espinozabrasil" target="_blank">INSTAGRAM</a>
-                    <br>
-                    <a class="underline" href="http://www.twitter.com/espinozabrasil" target="_blank">TWITTER</a>
-                </p>
+                <ul>
+                    <ui>
+                        <a class="underline" href="http://www.instagram.com/espinozabrasil" target="_blank">INSTAGRAM</a>
+                        <div class="linhaMenu"></div>
+                    </ui>
+                    <ui>
+                        <a class="underline" href="http://www.twitter.com/espinozabrasil" target="_blank">TWITTER</a>
+                        <div class="linhaMenu"></div>
+                    </ui>
+                </ul>
             </div>
         </div>
         <div></div>
         <div class="destaques"> <!-- DESTAQUES -->
-            <div>
+            <div> <!-- DESTAQUE PRINCIPAL -->
                 <iframe class="videoDestaque" src="https://www.youtube.com/embed/zkJK06vHvTs?controls=0" frameborder="0" allow="accelerometer; autoplay;
                 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div>
-                    <p class="textoDestaque">ÚLTIMO SINGLE<br>AUTOENGANO</p>
+                    <p class="textoDestaque centraTexto">ÚLTIMO SINGLE · AUTOENGANO</p>
                 </div>
                 <div>
-                    <p class="texto limpaMargens">Ouça Agora</p>
+                    <p class="texto centraTexto limpaMargens">Ouça Agora</p>
                 </div>
-    
             </div>
-            <div class="containerLogos">    
-                <a href="#">
-                    <img class="logoStr" src="assets/logos/bandcamp-logo.png">
+            <div class="containerLogos"> <!-- STREAMING -->  
+                <a href="https://espinozabrasil.bandcamp.com/" target="_blank">
+                    <img class="logoStr underline" src="assets/logos/bandcamp-logo.png">
                 </a>
-                <a href="#">
-                    <img class="logoStr" src="assets/logos/spotify-logo.png">
+                <a href="https://open.spotify.com/artist/7CIkpLBVQB10YswpwMaqFD?si=fRMjniQ9Tj-YiZJnRolB-A" target="_blank">
+                    <img class="logoStr underline" src="assets/logos/spotify-logo.png">
                 </a>
-                <a href="#">
-                    <img class="logoStr" src="assets/logos/deezer-logo.png">
+                <a href="https://www.deezer.com/br/artist/4239520" target="_blank">
+                    <img class="logoStr underline" src="assets/logos/deezer-logo.png">
                 </a>
-                <a href="#">
-                    <img class="logoStr" src="assets/logos/apple-music-logo.png">
+                <a href="https://music.apple.com/us/artist/espinoza/1218504600" target="_blank">
+                    <img class="logoStr underline" src="assets/logos/apple-music-logo.png">
                 </a>
             </div>
         </div>
         <div></div>
+        <div></div>
 
+        <video autoplay muted loop id="videoBG">
+            <source src="assets/ESPINOZA_Video_BG.mp4" type="video/mp4">
+        </video>
+    </main>
 
+    <div id="Sobre" class="bgCapas">
+        <div class="containerTitulo">
+            <h1>SOBRE</h1>
+        </div>
+        <div class="gridConteudo">
+            <div></div>
+            <div>
+                <img  class="fotoBio" src="assets/foto_bio.jpg">
+            </div>
+            <div>
+                <a class="texto textoSobre">Unidos por um sintoma típico da geração dos anos 90 
+                    de se meter a fazer seu próprio som, a Espinoza é uma banda carioca 
+                    formada em 2015 por Carlos Gonçalves (bateria), Vinicius Braz 
+                    (guitarra e voz), Vinícius Franco (baixo e voz) e Viviane Franco 
+                    (teclado e voz). Fazendo a ponte zona norte/zona oeste, metade da banda 
+                    vem de um lado da cidade e metade vem do outro.</a>
+            </div>
+            <div>
+        </div>
     </div>
-    <video autoplay muted loop id="videoBG">
-        <source src="assets/ESPINOZA_Video_BG.mp4" type="video/mp4">
-    </video>
+
+    <div id="Discos" class="bgCapas">
+        <div class="containerTitulo">
+            <h1>DISCOGRAFIA</h1>
+        </div>
+        <div class="capas">
+            <div class="textoCapas">
+                <a href="https://espinozabrasil.bandcamp.com/track/autoengano" target="_blank">
+                    <h1 class="disco">AUTOENGANO</h1>
+                    <h2>Single · 2019</h2>
+                </a>
+            </div>
+            <img class="cropCapa" src="assets/capas/autoengano_1440.jpg" class="imgCapas">
+        </div>
+        <div class="capas">
+            <div class="textoCapas">
+                <a href="https://espinozabrasil.bandcamp.com/album/antes-da-f-sica-vem-o-poltergeist" target="_blank">
+                    <h1 class="disco">ANTES DA FÍSICA VEM O POLTERGEIST</h1>
+                    <h2>EP · 2018</h2>
+                </a>
+            </div>
+            <img class="cropCapa" src="assets/capas/adfvop_1440.jpg" class="imgCapas">
+        </div>
+        <div class="capas">
+            <div class="textoCapas">
+                <a href="https://espinozabrasil.bandcamp.com/album/quero-mais" target="_blank">
+                    <h1 class="disco">QUERO MAIS</h1>
+                    <h2>Single · 2017</h2>
+                </a>
+            </div>
+            <img class="cropCapa" src="assets/capas/quero_mais_1440.jpg" class="imgCapas">
+        </div>
+    </div>
 </body>
 </html>
