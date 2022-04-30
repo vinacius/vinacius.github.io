@@ -260,7 +260,7 @@ h1.Projeto {
 h2.Projeto {
   font-family: 'Regular', sans-serif;
   font-style: normal;
-  font-size: 42px;
+  font-size: 64px/2 + 10;
   line-height: 69px;
   text-align: left;
 }
@@ -539,6 +539,10 @@ div.separador {
     font-size: 64px;
     line-height: 68px;
     color: #eaeaea !important;
+    background-color: #2c6fa3;
+  }
+  .navbar-nav {
+    text-align: right !important;
   }
 }
 .textoLegenda {
@@ -564,24 +568,24 @@ div.separador {
 @media screen and (max-width: 1440px) {
   .tituloPrincipal,
   h2.Projeto {
-    font-size: 32px;
-    line-height: 34.5px;
+    font-size: 64px / 2;
+    line-height: 69px / 2;
   }
   .textoCorrido {
     font-size: 16px;
     line-height: 18px;
   }
   .tituloSecundario {
-    font-size: 16px;
-    line-height: 20x;
+    font-size: 32px / 2;
+    line-height: 40x / 2;
   }
   .textoLegenda {
     font-size: 14px;
     line-height: 16px;
   }
   h1.Projeto {
-    font-size: 32px;
-    line-height: 34.5px;
+    font-size: 64px / 2;
+    line-height: 69px / 2;
   }
   div.separador {
     margin-top: 8px;
