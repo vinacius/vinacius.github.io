@@ -49,7 +49,7 @@ main {
   padding: 0px;
   position: relative;
   min-height: 100vh;
-  margin: 0 auto -128px;
+  margin: 0 auto auto;
 }
 footer {
   position: relative;
@@ -81,7 +81,7 @@ p.branco {
   letter-spacing: 0.3em;
 }
 .Principal {
-  padding: 96px 16px 16px 16px !important;
+  padding: 96px 16px 16px 32px !important;
 }
 @media (max-width: 768px) {
   .tituloGeral {
@@ -532,7 +532,13 @@ div.separador {
   font-style: normal;
   font-size: 24px;
   line-height: 28px;
+  padding-right: 0rem !important;
+  padding-left: 1rem !important;
   color: #eaeaea !important;
+}
+.navbar {
+  padding-left: 0.7rem;
+  padding-top: 0.3rem;
 }
 @media (max-width: 768px) {
   .textoMenu {
@@ -747,7 +753,7 @@ iframe {
   }
   .FixDiv {
     position: relative;
-    padding: 16px 16px 16px 16px !important;
+    padding: 32px 16px 16px 0px !important;
   }
 }
 @media (max-width: 768px) {
