@@ -1,0 +1,52 @@
+/* variaveis globais */
+:root {
+    --corDestaque: #6add93;
+    --corBranco: #ffffff;
+    --corPreto: #111111;
+}
+
+/* ajustes de responsividade */
+
+@media screen and (min-width: 600px) {
+    div.conteudo {
+        width: 60vh;
+    }
+}
+
+@font-face {
+    font-family: NotoSerif;
+    src: url(../assets/fonts/Noto_Serif/NotoSerif-Light.ttf);
+}
+
+::selection {
+    background-color: var(--corDestaque);
+}
+
+body {
+    background-color: var(--corPreto);
+}
+
+p {
+    font-family: NotoSerif;
+    font-size: 32px;
+    color: var(--corBranco);
+}
+
+a, a:visited {
+    font-family: NotoSerif;
+    color: var(--corBranco);
+    text-decoration: none;   
+}
+
+a:hover {
+    color: var(--corDestaque);
+}
+
+.conteudo {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 100vh;
+    padding: 12px;
+    
+}
