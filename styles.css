@@ -34,7 +34,7 @@
 
 body {
     background-color: var(--corPreto);
-    margin: 0px`;
+    margin: 0px;
 }
 
 p {
@@ -57,7 +57,6 @@ a:hover {
     display: flex;
     justify-content: left;
     align-items: center;
-    min-height: 100vmin;
-    padding-left: 24px;
-    
+    min-height: 100vh;
+    padding-left: 24px;   
 }
