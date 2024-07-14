@@ -9,7 +9,7 @@
 
 @media screen and (min-width: 600px) {
     div.conteudo {
-        width: 60vh;
+        width: 45%;
     }
 }
 
@@ -18,22 +18,33 @@
     src: url(../assets/fonts/Noto_Serif/NotoSerif-Light.ttf);
 }
 
+@font-face {
+    font-family: Fraunces;
+    src: url(../assets/fonts/Fraunces/Fraunces_9pt_SuperSoft-Regular.ttf);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(../assets/fonts/Poppins/Poppins-Light.ttf);
+}
+
 ::selection {
     background-color: var(--corDestaque);
 }
 
 body {
     background-color: var(--corPreto);
+    margin: 0px`;
 }
 
 p {
-    font-family: NotoSerif;
+    font-family: Poppins;
     font-size: 32px;
     color: var(--corBranco);
 }
 
 a, a:visited {
-    font-family: NotoSerif;
+    font-family: Poppins;
     color: var(--corBranco);
     text-decoration: none;   
 }
@@ -46,7 +57,7 @@ a:hover {
     display: flex;
     justify-content: left;
     align-items: center;
-    min-height: 100vh;
-    padding: 24px;
+    min-height: 100vmin;
+    padding-left: 24px;
     
 }
