@@ -3,19 +3,15 @@
 */
 @font-face {
   font-family: "Poppins-Regular";
-  src: url("../assets/fonts/Poppins/Poppins-Regular.ttf");
+  src: url("/blog/assets/fonts/Poppins/Poppins-Regular.ttf");
 }
 @font-face {
   font-family: "Poppins-Bold";
-  src: url("../assets/fonts/Poppins/Poppins-Bold.ttf");
-}
-@font-face {
-  font-family: "Tiny5";
-  src: url("../assets/fonts/Tiny5/Tiny5-Regular.ttf");
+  src: url("/blog/assets/fonts/Poppins/Poppins-Bold.ttf");
 }
 @font-face {
   font-family: "Roboto-Light";
-  src: url("../assets/fonts/Roboto/Roboto-Light.ttf");
+  src: url("/blog/assets/fonts/Roboto/Roboto-Light.ttf");
 }
 /*$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;*/
 /**
