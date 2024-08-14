@@ -14,8 +14,8 @@
   src: url("../assets/fonts/Tiny5/Tiny5-Regular.ttf");
 }
 @font-face {
-  font-family: "NotoSerif-Regular";
-  src: url("../assets/fonts/Noto_Serif/static/NotoSerif-Regular.ttf");
+  font-family: "Roboto-Light";
+  src: url("../assets/fonts/Roboto/Roboto-Light.ttf");
 }
 /*$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;*/
 /**
@@ -32,16 +32,16 @@ dl, dd, ol, ul, figure {
 Selection
 */
 ::selection {
-  background: #06975e;
-  color: #222222;
+  background: #828282;
+  color: #fffcf1;
 }
 
 /**
  * Basic styling
  */
 body {
-  font: 400 16px/1.5 "Poppins-Regular";
-  color: #ffffff;
+  font: 400 16px/1.5 "Roboto-Light";
+  color: #fffcf1;
   background-color: #222222;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
@@ -55,7 +55,7 @@ body {
 }
 
 p {
-  font-family: "NotoSerif-Regular";
+  font-family: "Roboto-Light";
   font-size: 18px;
 }
 
@@ -128,7 +128,7 @@ a:visited {
   color: #09e18c;
 }
 a:hover {
-  color: #ffffff;
+  color: #fffcf1;
 }
 .social-media-list a:hover {
   text-decoration: none;
@@ -141,8 +141,8 @@ a:hover {
  * Blockquotes
  */
 blockquote {
-  color: #828282;
-  font-family: "Poppins-Regular" !important;
+  color: #fffcf1;
+  font-family: "Poppins-Bold" !important;
   margin-left: 87.5px;
   border-left: 4px solid #06975e;
   padding-left: 15px;
@@ -261,17 +261,14 @@ table td {
 
 .site-title {
   font-size: 26px;
-  font-family: "Tiny5";
-  font-size: 40px;
+  font-family: "Poppins-Regular";
+  font-size: 24px;
   line-height: 54px;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
+  color: #828282 !important;
 }
-.site-title, .site-title:visited {
-  color: #424242;
-}
-
 .site-nav {
   float: right;
   line-height: 54px;
@@ -283,7 +280,7 @@ table td {
   display: none;
 }
 .site-nav .page-link {
-  color: #ffffff;
+  color: #fffcf1;
   line-height: 1.5;
 }
 .site-nav .page-link:not(:last-child) {
@@ -407,6 +404,7 @@ table td {
 .page-content {
   padding: 30px 0;
   flex: 1;
+  overflow-wrap: break-word;
 }
 
 .page-heading {
@@ -414,7 +412,7 @@ table td {
 }
 
 .post-list-heading {
-  font-size: 28px;
+  /* @include relative-font-size(1.75); */
 }
 
 .post-list {
@@ -425,13 +423,19 @@ table td {
   margin-bottom: 30px;
 }
 
+.post-list-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
 .post-meta {
   font-size: 14px;
   color: #828282;
 }
 
 .post-link {
-  font-family: "Poppins-Regular";
+  font-family: "Roboto-Light";
   display: block;
   font-size: 24px;
 }
