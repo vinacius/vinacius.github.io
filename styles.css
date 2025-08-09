@@ -3,15 +3,16 @@
     --corDestaque: #08c87d;
     --corBranco: #fffcf1;
     --corPreto: #222222;
+    --corCinza: #828282;
 }
 
 /* ajustes de responsividade */
 
-@media screen and (min-width: 600px) {
+/* @media screen and (min-width: 600px) {
     div.conteudo {
-        width: 45%;
+        width: 80%;
     }
-}
+}*/
 
 @font-face {
     font-family: NotoSerif;
@@ -25,38 +26,50 @@
 
 @font-face {
     font-family: Poppins;
-    src: url(../assets/fonts/Poppins/Poppins-Light.ttf);
+    src: url(../assets/fonts/Poppins/Poppins-Bold.ttf);
 }
 
 ::selection {
-    background-color: var(--corDestaque);
+    background-color: var(--corPreto);
+    color: var(--corBranco);
 }
 
 body {
-    background-color: var(--corPreto);
+    background-color: var(--corDestaque);
     margin: 0px;
 }
 
 p {
     font-family: Poppins;
-    font-size: 32px;
-    color: var(--corBranco);
+    font-size: 64px;
+    line-height: 125%;
+    color: var(--corPreto);
 }
 
 a, a:visited {
     font-family: Poppins;
-    color: var(--corBranco);
+    color: var(--corPreto);
     text-decoration: none;   
 }
 
 a:hover {
-    color: var(--corDestaque);
+    color: var(--corBranco);
+    animation-name: example;
+    opacity: 75%;
 }
 
 .conteudo {
     display: flex;
     justify-content: left;
     align-items: center;
-    min-height: 100vh;
-    padding-left: 24px;   
+    min-height: 0vh;
+    padding-left: 24px;  
+    width: 95%;
+}
+
+@media screen and (max-width: 600px) {
+    p {
+        font-size: 32px;
+    }
+    
 }
