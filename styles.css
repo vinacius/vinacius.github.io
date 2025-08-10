@@ -6,14 +6,6 @@
     --corCinza: #828282;
 }
 
-/* ajustes de responsividade */
-
-/* @media screen and (min-width: 600px) {
-    div.conteudo {
-        width: 80%;
-    }
-}*/
-
 @font-face {
     font-family: NotoSerif;
     src: url(../assets/fonts/Noto_Serif/NotoSerif-Light.ttf);
