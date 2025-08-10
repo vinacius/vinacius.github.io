@@ -64,6 +64,12 @@
     src: url("../assets/fonts/Poppins/Poppins-Italic.ttf");
 }
 
+@font-face {
+    font-family: Knockout;
+    src: url("../assets/fonts/Knockout/Knockout-HTF48-Featherweight.otf");
+}
+
+
 
 /* customizacoes */
 .titulo {
@@ -107,11 +113,13 @@
 }
 
 .sumario {
-    font-family: PoppinsLight;
+    /*font-family: PoppinsLight;*/
 }
 
 .h1Sumario {
-    font-family: Poppins-Bold;
+    font-family: Knockout;
+    text-transform: uppercase;
+    font-size: 1.8em;
 }
 
 .h2Sumario {
@@ -126,8 +134,9 @@ article {
 }
 
 #titulo {
-    font-family: Poppins-Black;
-    font-size: 3.8em;
+    font-family: Knockout;
+    text-transform: uppercase;
+    font-size: 5.8em;
     line-height: 120%;
     color: var(--corDestaque);
     display: inline;
@@ -137,7 +146,8 @@ article {
 }
 
 h1 {
-    font-family: Poppins-Bold;
+    font-family: Knockout;
+    text-transform: uppercase;
 }
 
 h2 {
