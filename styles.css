@@ -4,6 +4,7 @@
     --corBranco: #fffcf1;
     --corPreto: #222222;
     --corCinza: #828282;
+    --corVermelho: #e75553;
 }
 
 @font-face {
@@ -45,9 +46,8 @@ a, a:visited {
 }
 
 a:hover {
-    color: var(--corBranco);
+    color: var(--corVermelho);
     animation-name: example;
-    opacity: 75%;
 }
 
 .conteudo {
