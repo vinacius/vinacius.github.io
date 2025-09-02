@@ -15,7 +15,7 @@
 @font-face {
     font-family: "et-book";
     src: url("fonts/SourceSerif4/SourceSerif4-Medium.ttf");
-    font-weight: normal;
+    font-weight: normal;ƒ
     font-style: normal;
     font-display: swap;
 }
@@ -69,6 +69,10 @@
     src: url("../assets/fonts/Knockout/Knockout-HTF48-Featherweight.otf");
 }
 
+@font-face {
+    font-family: KnockoutJunior;
+    src: url("../assets/fonts/Knockout/Knockout-HTF26-JuniorFlyweight.otf");
+}
 
 
 /* customizacoes */
@@ -81,11 +85,83 @@
     padding-right: 11%;
     padding-bottom: 12.5%;
     background-color: var(--corDestaque);
-    background: linear-gradient(rgb(213, 98, 88, 0.6),  rgb(213, 98, 88, 0.6)), url("media/midia_ninja_live.gif");
+        background: linear-gradient(rgb(22, 22, 22, 0.6),  rgb(22, 22, 22, 0.6)), url("media/midia_ninja_live.gif");
+    background: linear-gradient(rgb(22, 22, 22, 0.6),  rgb(22, 22, 22, 0.6)), url("media/midia_ninja_live.gif");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
 
+}
+
+.quadro1 {
+    position: sticky;
+    width: 177%;
+    height: 720px;
+    margin-left: -20%;
+    margin-top: 10%;
+    margin-right: 0;
+    
+    padding-top: 12.5%;
+    padding-left: 12.5%;
+    padding-right: 11%;
+    padding-bottom: 12.5%;
+    
+    background-color: var(--corDestaque);
+    background: linear-gradient(rgb(22, 22, 22, 0.6),  rgb(22, 22, 22, 0.6)), url("media/midia_ninja_live.gif");
+
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: 100% 100%;
+}
+
+.quadro2 {
+    position: sticky;
+    width: 177%;
+    height: fit-content;
+    margin-left: -20%;
+    margin-top: 10%;
+    margin-right: 0;
+    
+    padding-top: 13.5%;
+    padding-left: 12.5%;
+    padding-right: 11%;
+    padding-bottom: 12.5%;
+    
+    background-color: var(--corDestaque);
+    background: linear-gradient(rgb(22, 22, 22, 0.6),  rgb(22, 22, 22, 0.6)), url("media/Youtubers_Bolsonaristas_640p.gif");
+
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-size: 100% 100%;
+}
+
+th {
+    width: 620px;
+    height: fit-content;
+    padding-top: 1.5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-bottom: 1.5%;
+    margin-bottom: 12%;
+
+    font-family: PoppinsLight;
+    color: var(--corBranco);
+    font-size: 1.2em;
+    line-height: 2rem;
+    text-align: left;
+
+    background: linear-gradient(rgb(10, 10, 10, 0.6),  rgb(10, 10, , 0.6));
+
+}
+
+th > strong {
+    font-family: Poppins;
+    color: var(--corDestaque);
+    text-transform: uppercase;
+}
+
+th > strong::selection {
+    color: var(--corBranco);
 }
 
 .titulo ::selection {
@@ -376,10 +452,11 @@ img {
     margin-right: -70%;
     width: 30%;
     max-width: 60%;
+    height: 100%;
     vertical-align: baseline;
     position: relative;
     margin-bottom: 10px;
-    border-radius: 24px;
+    /* border-radius: 24px; */
     border: 8px solid var(--corDestaque);
 }
 
@@ -398,9 +475,13 @@ img {
     color: var(--corDestaque);
 }
 
+.sidenote::selection {
+    color: var(--corPreto);
+}
+
 .sidenote-number {
     counter-increment: sidenote-counter;
-    color: var(--corDestaque);
+    color: var(--corBranco);
 }
 
 .sidenote-number:after,
