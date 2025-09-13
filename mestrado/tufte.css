@@ -600,9 +600,32 @@ label.margin-toggle:not(.sidenote-number) {
 
 @media (max-width: 760px) {
     body {
-        width: 84%;
+        /* width: 84%;
         padding-left: 8%;
-        padding-right: 8%;
+        padding-right: 8%; */
+    }
+
+    article {
+        width: 90%;
+        margin: 0 6% 0 6%;
+        padding: 0;
+    }
+
+    .titulo {
+        padding: 6% 0 6% 0;
+    }
+
+    #titulo {
+        font-size: 3.8em;
+        line-height: 110%;
+        padding: 1%;
+        margin: 6% 6% 0% 6%;
+    }
+
+   .subtitulo {
+        width: 90%;
+        padding: 6% 0 6% 0;
+        margin: 0 6% 0% 6%;
     }
 
     hr,
@@ -639,7 +662,9 @@ label.margin-toggle:not(.sidenote-number) {
 
     blockquote p,
     blockquote footer {
+        display: block;
         width: 100%;
+        margin: 2rem auto;
     }
 
     label.margin-toggle:not(.sidenote-number) {
@@ -672,7 +697,112 @@ label.margin-toggle:not(.sidenote-number) {
         width: 85%;
     }
 
-    img {
+    article img {
+           display: block;
+           width: 100%;
+           max-width: 100%;
+           height: auto;
+           position: relative;
+           margin: 2rem auto;
+           float: none;
+           clear: both;
+    }
+
+    table, thead, tbody, tr {
+        display: block;
         width: 100%;
     }
+    td, th {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: left;
+        margin-bottom: 3%;
+    }
+
+    th > strong {
+    font-family: Poppins;
+    color: var(--corDestaque);
+    text-transform: uppercase; 
+    }
+
+    th > strong::selection {
+        color: var(--corPreto);
+    }
+    table {
+        max-width: 100vw;
+        width: 100%;
+        overflow-x: auto;
+        box-sizing: border-box;
+        display: block;
+    }
+    .quadro1,
+    .quadro2 {
+        max-width: 100vw;
+        width: 100%;
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-right: 0;
+        height: auto;
+        background: var(--corPreto) !important;
+        background-image: none !important;
+        padding: 0;
+    }
+    .quadro1::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 400px;
+        background: url('media/midia_ninja_live.gif') center center/cover no-repeat;
+        margin-bottom: 1.5rem;
+    }
+    .quadro2::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 400px;
+        background: url('media/Youtubers_Bolsonaristas_640p.gif') center center/cover no-repeat;
+        margin-bottom: 1.5rem;
+    }
+    .quadro1 table,
+    .quadro2 table {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .quadro1 td,
+    .quadro1 th,
+    .quadro2 td,
+    .quadro2 th {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: left;
+    }
+   
+    /* Reordenação das células das tabelas dos quadros no mobile */
+    .quadro1 table,
+    .quadro2 table {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .quadro1 tr,
+    .quadro1 th,
+    .quadro2 tr,
+    .quadro2 th {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: left;
+    }
+    /* Ordem visual para quadro1 */
+    .quadro1 .retorica-visual { order: 1; }
+    .quadro1 .funcao-imagem { order: 2; }
+    .quadro1 .qualidade-comunicacao { order: 3; }
+    .quadro1 .exame-funcao { order: 4; }
+    .quadro1 .retorica-interacao { order: 5; }
+    .quadro1 .construcao-ethos { order: 6; }
+    .quadro1 .dinamica-progresso { order: 7; }
+    .quadro1 .formacao-grupo { order: 8; }
 }
