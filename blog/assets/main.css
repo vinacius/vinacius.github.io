@@ -135,7 +135,7 @@ a:hover {
  */
 blockquote {
   color: #222222;
-  margin-right: 112.5px;
+  margin-right: 12.5%;
   border-left: 4px solid #08c87d;
   padding-left: 15px;
   font-family: "Poppins-Bold";
@@ -145,7 +145,7 @@ blockquote > :last-child {
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   blockquote {
     margin-right: 0px;
     font-size: 25.2px !important;
@@ -180,17 +180,17 @@ pre > code {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(900px - (30px * 2));
-  max-width: calc(900px - 30px * 2);
-  margin-right: auto;
-  margin-left: auto;
+  max-width: -webkit-calc(100% - (30px * 2));
+  max-width: calc(100% - 30px * 2);
+  margin-right: 0.75%;
+  margin-left: 0.75%;
   padding-right: 30px;
   padding-left: 30px;
 }
 @media screen and (max-width: 800px) {
   .wrapper {
-    max-width: -webkit-calc(900px - (30px));
-    max-width: calc(900px - (30px));
+    max-width: -webkit-calc(100% - (30px));
+    max-width: calc(100% - (30px));
     padding-right: 15px;
     padding-left: 15px;
   }
@@ -251,10 +251,12 @@ table td {
  * Site header
  */
 .site-header {
-  margin-top: 20px;
-  margin-bottom: 20px;
   min-height: 55.95px;
   position: relative;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .site-title {
@@ -264,11 +266,22 @@ table td {
   line-height: 77.9625px;
   letter-spacing: -1px;
   margin-bottom: 0;
-  float: left;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
   color: #828282 !important;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .site-title {
+    font-size: 31.5px;
+    line-height: 1.65;
+  }
 }
 .site-nav {
-  float: right;
+  position: relative;
+  z-index: 2;
   line-height: 77.9625px;
 }
 .site-nav .nav-trigger {
@@ -284,13 +297,12 @@ table td {
 .site-nav .page-link:not(:last-child) {
   margin-right: 20px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .site-nav {
-    position: absolute;
-    top: 20%;
-    right: 15px;
+    position: relative;
+    right: 30px;
     background-color: #fffcf1;
-    text-align: right;
+    text-align: left;
   }
   .site-nav label[for=nav-trigger] {
     display: block;
@@ -306,7 +318,7 @@ table td {
     width: 36px;
     height: 26px;
     line-height: 0;
-    padding-top: 10px;
+    padding-top: 18px;
     text-align: center;
   }
   .site-nav .menu-icon > svg {
@@ -356,9 +368,12 @@ table td {
 }
 
 .footer-col {
-  float: left;
+  float: center;
   margin-bottom: 15px;
   padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .footer-col-1 {
@@ -387,7 +402,7 @@ table td {
     width: calc(100% - 30px / 2);
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .footer-col {
     float: none;
     width: -webkit-calc(100% - (30px / 2));
@@ -403,6 +418,18 @@ table td {
   overflow-wrap: break-word;
 }
 
+.home {
+  width: 60%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 768px) {
+  .home {
+    width: 95% !important;
+  }
+}
+
 .page-heading {
   font-size: 42px;
 }
@@ -412,7 +439,8 @@ table td {
 }
 
 .post-list {
-  margin-left: 0;
+  margin-left: auto;
+  margin-right: auto;
   list-style: none;
   /*( > li {
     margin-bottom: $spacing-unit/2;
@@ -423,20 +451,30 @@ table td {
   display: flex;
   align-items: baseline;
   gap: 30px;
+  width: 100%;
 }
 
 .post-meta {
   font-size: 18.375px;
   color: #828282;
+  width: 120px;
+  flex-shrink: 0;
+  text-align: right;
+}
+.post-header .post-meta {
+  width: 100%;
+  text-align: center;
+  flex-shrink: 1;
 }
 
 .post-link {
   font-family: "Roboto-Light";
   font-size: 31.5px;
   display: block;
+  flex-grow: 1;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .post-list-item {
     display: block;
     gap: 30px;
@@ -449,11 +487,12 @@ table td {
  * Posts
  */
 .post-header {
+  text-align: center !important;
   margin-bottom: 30px;
 }
 
 .post-title {
-  font-size: 48.3px;
+  font-size: 56.7px;
   font-family: "Poppins-Bold";
   letter-spacing: -1px;
   line-height: 1;
@@ -466,6 +505,16 @@ table td {
 
 .post-content {
   margin-bottom: 30px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 768px) {
+  .post-content {
+    width: 95% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
 .post-content h2 {
   font-size: 42px;
